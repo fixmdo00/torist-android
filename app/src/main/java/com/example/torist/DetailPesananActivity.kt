@@ -86,7 +86,7 @@ class DetailPesananActivity : AppCompatActivity() {
             val _total_semua_harga = detailPesanan.order_total_price + detailPesanan.order_delivery_price
             val total_semua_harga = "Rp " + NumberFormat.getNumberInstance(Locale.getDefault()).format(_total_semua_harga)
 
-            binding.tvStatus.text = StatusPesanan.getStatus(detailPesanan.order_status, binding.pengirimanContainerTv, binding.containerBtnSelesaikanPesanan)
+            binding.tvStatus.text = StatusPesanan.getStatus(detailPesanan.order_status, binding.pengirimanContainerTv, binding.containerBtnSelesaikanPesanan, binding.containerBtnBatalkanPesanan)
             binding.tvAlamatPengiriman.text = detailPesanan.order_address
             binding.tvNamaPenerima.text = detailPesanan.order_name
             binding.tvTlpPenerima.text = detailPesanan.order_telp

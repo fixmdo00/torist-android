@@ -439,23 +439,41 @@
 
             </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/containerBtnSelesaikanPesanan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:background="@color/white"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/btnSelesaikanPesanan"
-                style="@style/Button.Profile"
+            <LinearLayout
+                android:id="@+id/containerBtnSelesaikanPesanan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Selesaikan Pesanan"
-                android:textColor="@color/grey"/>
-        </LinearLayout>
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnSelesaikanPesanan"
+                    style="@style/Button.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selesaikan Pesanan"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/containerBtnBatalkanPesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnBatalkanPesanan"
+                    style="@style/Button.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selesaikan Pesanan"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>

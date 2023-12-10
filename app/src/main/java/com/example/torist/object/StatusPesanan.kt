@@ -81,33 +81,38 @@ object StatusPesanan {
         return status
     }
 
-    fun getStatus(id : String, containerTv : LinearLayout, containerbtn : LinearLayout) : String{
+    fun getStatus(id : String, containerTv : LinearLayout, containerbtn : LinearLayout, containerBatal : LinearLayout) : String{
         var status = ""
         when (id){
             "1" -> {
                 status = "Belum Dibayar"
                 containerTv.visibility = View.GONE
                 containerbtn.visibility = View.GONE
+                containerBatal.visibility = View.VISIBLE
             }
             "2" -> {
                 status = "Menunggu Konfirmasi Pembayaran"
                 containerTv.visibility = View.GONE
                 containerbtn.visibility = View.GONE
+                containerBatal.visibility = View.GONE
             }
             "3" -> {
                 status = "Menunggu Pengiriman"
                 containerTv.visibility = View.GONE
                 containerbtn.visibility = View.GONE
+                containerBatal.visibility = View.GONE
             }
             "4" -> {
                 status = "Dalam Pengiriman"
                 containerTv.visibility = View.VISIBLE
                 containerbtn.visibility = View.VISIBLE
+                containerBatal.visibility = View.GONE
             }
             "5" -> {
                 status = "Selesai"
                 containerTv.visibility = View.VISIBLE
                 containerbtn.visibility = View.GONE
+                containerBatal.visibility = View.GONE
             }
         }
         return status
