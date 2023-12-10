@@ -3,6 +3,7 @@ package com.example.torist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.LiveData
@@ -55,7 +56,6 @@ class DetailPesananActivity : AppCompatActivity() {
         if (order_id.isNotBlank()) {
 
             updateDetailPesanan(order_id)
-
             Pesanan.getProductListFromDB(order_id!!, binding.loadingProgressBar){
                 when(it){
                     true -> {
@@ -79,6 +79,21 @@ class DetailPesananActivity : AppCompatActivity() {
             val total_harga = "Rp " + NumberFormat.getNumberInstance(Locale.getDefault()).format(Pesanan.getTotalHarga())
             binding.tvTotalHarga1.text = total_harga
             binding.tvTotalHarga2.text = total_harga
+        }
+
+        binding.btnBatalkanPesanan.setOnClickListener {
+            Pesanan.hapusPesanan(binding.loadingProgressBar, detailPesanan.order_id){
+                when (it){
+                    true -> {
+                        Toast.makeText(this, "Berhasil menghapus pesanan", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("start_fragment", PESANAN_FRAGMENT)
+                        startActivity(intent)
+//                        onBackPressed()
+                    }
+                    false -> Toast.makeText(this, "Gagal menghapus pesanan", Toast.LENGTH_LONG).show()
+                }
+            }
         }
 
         liveUpdate.observe(this){
@@ -195,5 +210,9 @@ class DetailPesananActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    companion object{
+        val KERANJANG_FRAGMENT = "keranjang"
+        val PESANAN_FRAGMENT = "pesanan"
     }
 }

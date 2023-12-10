@@ -84,6 +84,11 @@ class PesananFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        pesanan.getFromDB(binding.loadingProgressBar)
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

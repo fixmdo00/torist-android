@@ -135,7 +135,7 @@ object Pesanan {
     }
 
     fun getPesananDetail(order_id : String) : Pesanan {
-        lateinit var list : Pesanan
+        var list = Pesanan("","","","","","","","","",0,"","",0,0,"","","","")
         try {
             for( i in 0 until _pesanan.length()){
                 val item = _pesanan.getJSONObject(i)
@@ -216,6 +216,7 @@ object Pesanan {
             Method.POST,
             url,
             com.android.volley.Response.Listener { response ->
+                progressBar.visibility = View.GONE
                 val resp = response.trim()
                 if (resp == "berhasil"){
                     callback(true)
