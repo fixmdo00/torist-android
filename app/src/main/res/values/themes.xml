@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Torist" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
+    </style>
+
+    <style name="Theme.Torist" parent="Base.Theme.Torist" />
+    
+    <style name="Button.Beranda" parent="Widget.Material3.Button">
+        <item name="backgroundTint">#FFFFFF</item>
+        <item name="rippleColor">#ADADAD</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="Button.Profile" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="Button.Keranjang" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">10dp</item>
+        <item name="rippleColor">@color/colorSecondaryContainer</item>
+        <item name="strokeColor">@color/primary</item>
+    </style>
+
+    <style name="Button.Keluar" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">10dp</item>
+
+    </style>
+
+    <style name="Button.Toko.Produk" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">10dp</item>
+        <item name="rippleColor">#ADADAD</item>
+    </style>
+
+    <style name="Button.Kembali" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">0dp</item>
+        <item name="rippleColor">#ADADAD</item>
+        <item name="strokeColor">#00FFFFFF</item>
+    </style>
+
+    <style name="Button.Kategori" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+</resources>

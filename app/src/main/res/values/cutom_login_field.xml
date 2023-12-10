@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTextInputEditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Sesuaikan properti gaya sesuai kebutuhan Anda -->
+        <item name="hintTextColor">@color/primary</item>
+        <!-- Dan lain-lain -->
+    </style>
+</resources>

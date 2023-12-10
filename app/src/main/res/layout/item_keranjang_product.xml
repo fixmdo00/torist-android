@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="2dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/keranjangProdukImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/keranjangProdukImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:id="@+id/keranjangProdukNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rangkain bunga hiasan ruang tamu"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/keranjangProdukHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 150.000"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#D3D3D3"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <Button
+                        android:id="@+id/keranjangProduktMinus"
+                        style="@style/Button.Keranjang"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:padding="9dp"
+                        app:icon="@drawable/icon_minus"
+                        app:iconTint="@color/primary"
+                        />
+                    <EditText
+                        android:id="@+id/keranjangProdukQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:inputType="number"
+                        android:text="3"
+                        android:textSize="14dp"
+                        android:imeOptions="actionDone"/>
+                    <Button
+                        android:id="@+id/keranjangProdukBtnPlus"
+                        style="@style/Button.Keranjang"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:padding="9dp"
+                        app:icon="@drawable/icon_plus"
+                        app:iconTint="@color/primary"
+                        />
+
+
+
+
+                    <TextView
+                        android:id="@+id/keranjangProdukTotalHarga"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|end"
+                        android:layout_weight="1"
+                        android:text="Rp. 12.000"
+                        android:layout_marginEnd="10dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Torist</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac magna a nunc venenatis volutpat. Duis auctor fermentum lectus nec volutpat. Curabitur hendrerit lacinia lobortis. Vestibulum pharetra tincidunt aliquet. Phasellus vitae elementum nisi, vel faucibus neque. Etiam consectetur eros sit amet eros laoreet, non suscipit dolor molestie. Mauris convallis nisi id neque semper dignissim. Nam erat felis, volutpat non accumsan et, auctor eget sem.</string>
+    <string-array name="provinsi">
+        <item>Nanggroe Aceh Darussalam</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Selatan</item>
+        <item>Sumatera Barat</item>
+        <item>Bengkulu</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Lampung</item>
+        <item>Bangka Belitung</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Utara</item>
+        <item>Banten</item>
+        <item>DKI Jakarta</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Daerah Istimewa Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Selatan</item>
+        <item>Maluku Utara</item>
+        <item>Maluku</item>
+        <item>Papua Barat</item>
+        <item>Papua</item>
+    </string-array>
+
+</resources>
