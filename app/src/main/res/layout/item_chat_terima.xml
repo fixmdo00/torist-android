@@ -7,11 +7,10 @@
     
     <TextView
         android:id="@+id/itemChatTerimaTvChat"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_item_chat_terima"
         android:padding="12dp"
-        app:layout_constraintWidth_max="wrap"
         android:textSize="14sp"
         android:text="Halo"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +20,7 @@
 
     <TextView
         android:id="@+id/itemChatTerimaTvWaktu"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="12 april"
         android:textSize="10sp"

@@ -47,10 +47,12 @@ class ChatActivity : AppCompatActivity() {
         autoRefreshChat(true)
         recyclerView = binding.RVChat
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.setHasFixedSize(true)
         chatAdapter = ChatAdapater(chatList)
         recyclerView.adapter = chatAdapter
         Chats.liveChats.observe(this){
             chatAdapter.list = Chats.getFriendArrayList(user_type)
+            Log.d("chat adapter list",chatAdapter.list.toString())
             chatAdapter.notifyDataSetChanged()
             recyclerView.scrollToPosition(chatAdapter.itemCount - 1)
             if (chatAdapter.list.size != 0) {
