@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.StringRequest
 import com.example.torist.data.Pesanan
 import com.example.torist.data.ProdukDetailPesanan
 import com.example.torist.data.ProdukKeranjang
@@ -204,5 +205,33 @@ object Pesanan {
             Log.d("pzn pesanan produk catch", e.toString())
         }
         return totalHarga
+    }
+
+    fun hapusPesanan (progressBar: ProgressBar, order_id : String, callback: (Boolean) -> Unit){
+        progressBar.visibility = View.VISIBLE
+        val url = "https://torist.my.id/api/delete_order.php"
+        val postData = HashMap<String, String>()
+        postData["order_id"] = order_id
+        val stringRequest = object : StringRequest(
+            Method.POST,
+            url,
+            com.android.volley.Response.Listener { response ->
+                val resp = response.trim()
+                if (resp == "berhasil"){
+                    callback(true)
+                } else {
+                    Log.e("error hapusPesanan", resp.toString())
+                    callback(false)
+                }
+            },
+            com.android.volley.Response.ErrorListener { error ->
+                Log.e("error hapusPesanan", error.toString())
+                callback(false)
+            }) {
+            override fun getParams(): Map<String, String> {
+                return postData
+            }
+        }
+        RQ.getRQ().add(stringRequest)
     }
 }
